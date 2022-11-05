@@ -1,0 +1,184 @@
+/* FONTS */
+
+@font-face {
+    font-family: Eras-Bold;
+    font-weight: 700;
+    src: url(fonts/eras-bold.woff2);
+}
+
+html {
+    -webkit-appearance: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    margin: 60px auto;
+    max-width: 1200px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    height: 450px;
+    box-shadow:
+        0.5px 0.6px 0.7px -10px rgba(0, 0, 0, 0.017),
+        1px 1.3px 1.6px -10px rgba(0, 0, 0, 0.024),
+        1.7px 2.1px 2.8px -10px rgba(0, 0, 0, 0.029),
+        2.6px 3.2px 4.2px -10px rgba(0, 0, 0, 0.032),
+        3.8px 4.6px 6px -10px rgba(0, 0, 0, 0.034),
+        5.3px 6.6px 8.5px -10px rgba(0, 0, 0, 0.036),
+        7.5px 9.3px 12.1px -10px rgba(0, 0, 0, 0.038),
+        11px 13.5px 17.5px -10px rgba(0, 0, 0, 0.041),
+        16.9px 20.8px 27px -10px rgba(0, 0, 0, 0.048),
+        30px 37px 48px -10px rgba(0, 0, 0, 0.07)
+        ;
+}
+
+.card .player-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card .player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .gold-overlay {
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+    width: 100%;
+    height: 100px;
+    background: rgb(216,200,66);
+    background: linear-gradient(90deg, rgba(216,200,66,1) 0%, rgba(189,172,30,1) 39%, rgba(216,200,66,1) 75%, rgba(149,135,19,1) 100%);
+    transform: skewY(-5deg);
+    opacity: 0.8;
+}
+
+.card .dark-gold-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    width: 100%;
+    height: 45px;
+    background: rgb(216,200,66);
+    background: linear-gradient(90deg, rgb(112 108 75) 0%, rgb(110 105 62) 39%, rgb(78 73 27) 75%, rgba(149,135,19,1) 100%);
+    transform: skewY(-10deg);
+    opacity: 0.2;
+}
+
+.card .badge {
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+    width: 60px;
+}
+
+.card .badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card .player-name-container {
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    font-family: Eras-Bold;
+}
+
+.card .player-name-container .first-name {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.card .player-name-container .last-name {
+    font-size: 36px;
+    line-height: 0.6;
+}
+
+.card .number-flag {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-family: Eras-Bold;
+    width: 44px;
+}
+
+.card .number-flag .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+}
+
+.card .number-flag .flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card .number-flag .flag .flag-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .number-flag .flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card .border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 4px solid rgb(116 105 10);
+    border-radius: 15px;
+}
+
+.card-shine {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    --space: 6%;
+    --angle: 133deg;
+    --imgsize: 60% 30%;
+    background-image: url('https://deck-24abcd.netlify.app/img/vmaxbg.jpg'), repeating-linear-gradient( -33deg, rgb(206, 42, 36) calc(var(--space)*1), rgb(157, 170, 223) calc(var(--space)*2), rgb(45, 153, 146) calc(var(--space)*3), rgb(29, 151, 36) calc(var(--space)*4), rgb(181, 64, 228) calc(var(--space)*5), rgb(206, 42, 36) calc(var(--space)*6) ), repeating-linear-gradient( var(--angle), rgba(14, 21, 46, 0.5) 0%, hsl(180, 10%, 50%) 2.5%, hsl(83, 50%, 35%) 5%, hsl(180, 10%, 50%) 7.5%, rgba(14, 21, 46, 0.5) 10% , rgba(14, 21, 46, 0.5) 15% ), radial-gradient( farthest-corner circle at var(--mx) var(--my), rgba(6, 218, 255, 0.6) 0%, rgba(38, 235, 127, 0.6) 25%, rgba(155, 78, 228, 0.6) 50%, rgba(228, 78, 90, 0.6) 75% );
+    background-blend-mode: color-burn, screen, soft-light;
+    background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+    background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+    filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(.6);
+}
